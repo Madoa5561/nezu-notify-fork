@@ -1,6 +1,3 @@
-from . import __version__
-
-
 class NezuNotifyError(Exception):
     """NezuNotify の基本例外クラス"""
 
@@ -8,7 +5,8 @@ class NezuNotifyError(Exception):
         self.message = message
         self.version = __version__
         super().__init__(f"[NezuNotify v{self.version}] {self.message}")
-
+def some_function():
+    from . import __version__
 
 class NezuNotifyValueError(NezuNotifyError):
     """無効な値が提供された場合に発生する例外"""
