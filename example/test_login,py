@@ -1,0 +1,5 @@
+from NezuNotify.login import Login
+
+res = Login("mail","password").login()
+csrf = res[0]
+cookie = res[1]
